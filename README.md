@@ -22,7 +22,7 @@ gatk HaplotypeCaller \
 
 * As mentioned above, I find that in order for the flag `--include-non-variant-sites` to work in the `GenotypeGVCFs` step, the input consolidated GVCF file should be consolidated using the tool `CombineGVCFs` (rather than `GenomicsDBImport`). 
 
-* Using `GenomicsDBImport`:
+* Using `CombineGVCFs`:
 ```
 gatk --java-options '-Xmx10g' CombineGVCFs \
 -R ref \
@@ -30,7 +30,7 @@ gatk --java-options '-Xmx10g' CombineGVCFs \
 --variant sample2.g.vcf.gz \
 --output all.g.vcf.gz
 ```
-* Using `CombineGVCFs`:
+* Using `GenomicsDBImport`:
 ```
 gatk --java-options -Xmx8g \
 GenomicsDBImport \
