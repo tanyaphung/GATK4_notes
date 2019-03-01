@@ -10,7 +10,7 @@ gatk HaplotypeCaller \
   -R ref \
   -I bam \
   -L chrm \
-	--emit-ref-confidence BP_RESOLUTION \
+  --emit-ref-confidence BP_RESOLUTION \
   --output output
 ```
 
